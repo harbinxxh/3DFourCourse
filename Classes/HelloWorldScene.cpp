@@ -1,4 +1,5 @@
 #include "HelloWorldScene.h"
+#include "C3DLayer.h"
 
 USING_NS_CC;
 
@@ -64,13 +65,17 @@ bool HelloWorld::init()
     this->addChild(label, 1);
 
     // add "HelloWorld" splash screen"
-    auto sprite = Sprite::create("HelloWorld.png");
-
-    // position the sprite on the center of the screen
-    sprite->setPosition(Vec2(visibleSize.width/2 + origin.x, visibleSize.height/2 + origin.y));
-
-    // add the sprite as a child to this layer
-    this->addChild(sprite, 0);
+//    auto sprite = Sprite::create("HelloWorld.png");
+//
+//    // position the sprite on the center of the screen
+//    sprite->setPosition(Vec2(visibleSize.width/2 + origin.x, visibleSize.height/2 + origin.y));
+//
+//    // add the sprite as a child to this layer
+//    this->addChild(sprite, 0);
+    
+    //创建出3D层
+	auto c3dlayer = C3DLayer::create();
+    this->addChild(c3dlayer, 1);
     
     return true;
 }
